@@ -60,6 +60,7 @@ nav h1 {
     transition: 300ms;
 }
 
+
 .logo {
     width: 23%;
     padding: 1%;
@@ -80,6 +81,33 @@ nav {
     margin: 0 auto;
 }
 
+section h1 {
+    text-align: center;
+}
+
+.cardContainer {
+    border: 1px solid white;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+}
+.flexContainer > div {
+    width: 33%;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.flexContainer p {
+    text-align: left;
+    padding: 10px;
+}
+
 footer {
     display: flex;
     flex-direction: row;
@@ -92,22 +120,4 @@ footer {
   height: 100px;
   align-items: center;
   justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 600){
-    .navbar div {
-        display: flex;
-        flex-direction: column;
-    }
-    section {
-        display: flex;
-        flex-direction: column;
-    }
-    section * {
-        width: 100%;
-    }
-    .footerItems {
-        display: flex;
-        flex-direction: column;
-    }
 }

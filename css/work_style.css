@@ -15,6 +15,11 @@ body {
     justify-content: space-evenly;
 }
 
+.myWork h1 {
+    display: flex;
+    justify-content: center;
+}
+
 nav h1 {
     font-weight: 500;
 }
@@ -60,6 +65,7 @@ nav h1 {
     transition: 300ms;
 }
 
+
 .logo {
     width: 23%;
     padding: 1%;
@@ -80,6 +86,73 @@ nav {
     margin: 0 auto;
 }
 
+.item1 {
+    grid-area: imageOne;
+}
+.item2 {
+    grid-area: imageTwo;
+}
+.item3 {
+    grid-area: imageThree;
+}
+.item4 {
+    grid-area: sectionOne;
+}
+.item5 {
+    grid-area: sectionTwo;
+}
+.item6 {
+    grid-area: sectionThree;
+}
+
+.workGrid {
+display: grid;
+grid-template-areas: 
+    'imageOne sectionOne' 
+    'imageTwo sectionTwo' 
+    'imageThree sectionThree'; 
+grid-template-columns: auto auto;
+/* grid-template-rows: 250px 300px; */
+/* grid-gap: 10px;  */
+}
+
+.item1, .item2, .item3 {
+    padding: 10px 10px 10px 40px;
+} 
+
+ .item4, .item5, .item6 {
+    padding-left: 10px;
+    padding-right: 10px;
+} 
+
+.grey {
+    background-color: #b8b8b8;
+}
+
+img {
+    border-radius: 20px;
+  }
+
+.infoButton {
+    padding: .5rem 2rem;
+    font-size: .90rem;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    border-radius: 2rem;
+    border-style: none;
+    border: 1px solid #a3a3a5;
+    background-color: black;
+    color: white;
+    transition: 300ms;
+    margin-left: 75%;
+}
+
+section {
+    height: 100%;
+    display: grid;
+    /* grid-template-columns: 125px 75%; */
+}
+
 footer {
     display: flex;
     flex-direction: row;
@@ -95,19 +168,15 @@ footer {
 }
 
 @media only screen and (max-width: 600){
-    .navbar div {
-        display: flex;
-        flex-direction: column;
-    }
-    section {
-        display: flex;
-        flex-direction: column;
-    }
-    section * {
-        width: 100%;
-    }
-    .footerItems {
-        display: flex;
-        flex-direction: column;
+    .workGrid {        
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'imageOne'
+            'sectionOne'
+            'imageTwo'
+            'sectionTwo'
+            'imageThree'
+            'sectionThree';
     }
 }
